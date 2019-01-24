@@ -1,5 +1,5 @@
 ﻿using HospitalClassLibrary.logic.api;
-using HospitalClassLibrary.model.uzytkownicy.pracownicy.stałe;
+using HospitalClassLibrary.model.uzytkownicy.pracownicy.stale;
 using System;
 using System.Collections.Generic;
 using System.Linq;

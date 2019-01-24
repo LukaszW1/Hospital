@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HospitalClassLibrary.model.uzytkownicy.pracownicy.stałe
+namespace HospitalClassLibrary.model.uzytkownicy.pracownicy.stale
 {
     enum SpecjalnoscLekarza
     {

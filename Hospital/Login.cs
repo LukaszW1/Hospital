@@ -7,15 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HospitalClassLibrary.model;
+using HospitalClassLibrary.model.uzytkownicy;
 
 namespace Hospital
 {
     public partial class Login : Form
     {
-
-        public Login()
+        Szpital szpital = new Szpital();
+        List<Pracownik> pracownicySzpitala;
+        public Login(Szpital szpital)
         {
+            this.szpital = szpital;
             InitializeComponent();
+            pracownicySzpitala = szpital.zwrocListePracownikow();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -25,7 +30,29 @@ namespace Hospital
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox2.Text
+            string login = textBox1.Text;
+            string haslo = textBox2.Text;
+            foreach(Pracownik pracownik in pracownicySzpitala)
+            {
+                if(pracownik.Login == login)
+                {
+                    if(pracownik.Haslo == haslo)
+                    {
+                        MessageBox.Show("Zalogowano pomyslnie");
+                        PanelUzytkownika panelUzytkownika = new PanelUzytkownika();
+                        panelUzytkownika.Show();
+                        break;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Złe hasło");
+                        break;
+                    }
+                }
+                else{
+                    MessageBox.Show("Nie znaleziono uzytkownika");
+                }
+            }
         }
     }
 }

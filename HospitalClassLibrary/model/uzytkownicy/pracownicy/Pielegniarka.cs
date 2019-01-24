@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HospitalClassLibrary.model.uzytkownicy.pracownicy
 {
-    class Pielegniarka : Pracownik, IPrintable
+    public class Pielegniarka : Pracownik, IPrintable
     {
         public Pielegniarka(string imie, string nazwisko, string pesel, string login, string haslo) : base(imie, nazwisko, pesel, login, haslo)
         {

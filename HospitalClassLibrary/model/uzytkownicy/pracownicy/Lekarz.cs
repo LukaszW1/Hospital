@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HospitalClassLibrary.model.uzytkownicy.pracownicy
 {
-    class Lekarz : Pracownik, IPrintable
+    public class Lekarz : Pracownik, IPrintable
     {
 
         SpecjalnoscLekarza specjalnosc;

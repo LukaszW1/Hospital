@@ -84,5 +84,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HospitalClassLibrary\HospitalClassLibrary.csproj">
+      <Project>{01ff32e2-d102-41f2-a5f2-54cf749055bb}</Project>
+      <Name>HospitalClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

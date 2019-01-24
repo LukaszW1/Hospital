@@ -7,21 +7,21 @@ using System.Threading.Tasks;
 
 namespace HospitalClassLibrary.model.uzytkownicy
 {
-    abstract class Pracownik : IPrintable
+    public abstract class Pracownik : IPrintable
     {
         string imie;
         string nazwisko;
         string pesel;
-        string login;
-        string haslo;
+        public string Login { get; private set; }
+        public string Haslo { get; private set; }
 
         public Pracownik(string imie, string nazwisko, string pesel, string login, string haslo)
         {
             this.imie = imie;
             this.nazwisko = nazwisko;
             this.pesel = pesel;
-            this.login = login;
-            this.haslo = haslo;
+            this.Login = login;
+            this.Haslo = haslo;
         }
 
         public void Wypisz()

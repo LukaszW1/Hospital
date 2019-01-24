@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HospitalClassLibrary.model.uzytkownicy.pracownicy.stale
 {
-    enum SpecjalnoscLekarza
+    public enum SpecjalnoscLekarza
     {
         Kardiolog, Urolog, Neurolog, Laryngolog,
     }

@@ -8,13 +8,23 @@ using System.Threading.Tasks;
 
 namespace HospitalClassLibrary.model
 {
-    class Szpital : IPrintable
+    public class Szpital : IPrintable
     {
-        List<Pracownik> pracownicySzpitala = new List<Pracownik>();
+        public static List<Pracownik> pracownicySzpitala = new List<Pracownik>();
+        public Szpital()
+        {
+            
+
+        }
 
         public void dodajPracownika(Pracownik pracownik)
         {
             pracownicySzpitala.Add(pracownik);
+        }
+
+        public List<Pracownik> zwrocListePracownikow()
+        {
+            return pracownicySzpitala;
         }
 
         public void Wypisz()

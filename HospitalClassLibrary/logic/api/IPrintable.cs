@@ -8,5 +8,6 @@ namespace HospitalClassLibrary.logic.api
 {
     interface IPrintable
     {
+        void Wypisz();
     }
 }

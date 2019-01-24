@@ -9,9 +9,9 @@ namespace HospitalClassLibrary.model.uzytkownicy
 {
     public abstract class Pracownik : IPrintable
     {
-        string imie;
-        string nazwisko;
-        string pesel;
+        public string imie { get; private set; }
+        public string nazwisko { get; private set; }
+        public string pesel { get; private set; }
         public string Login { get; private set; }
         public string Haslo { get; private set; }
 

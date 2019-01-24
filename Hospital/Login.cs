@@ -33,14 +33,23 @@ namespace Hospital
             string login = textBox1.Text;
             string haslo = textBox2.Text;
             foreach(Pracownik pracownik in pracownicySzpitala)
-            {
+            {   
+                // TODO fix when no user is found
                 if(pracownik.Login == login)
                 {
                     if(pracownik.Haslo == haslo)
                     {
                         MessageBox.Show("Zalogowano pomyslnie");
-                        PanelUzytkownika panelUzytkownika = new PanelUzytkownika();
-                        panelUzytkownika.Show();
+                        if (pracownik is Administrator)
+                        {
+                            PanelAdmina panelAdmina = new PanelAdmina();
+                            panelAdmina.Show();
+                        }
+                        else
+                        {
+                            PanelUzytkownika panelUzytkownika = new PanelUzytkownika();
+                            panelUzytkownika.Show();
+                        }
                         break;
                     }
                     else
@@ -49,10 +58,9 @@ namespace Hospital
                         break;
                     }
                 }
-                else{
-                    MessageBox.Show("Nie znaleziono uzytkownika");
-                }
+                            
             }
+            MessageBox.Show("Nie znaleziono uzytkownika");
         }
     }
 }

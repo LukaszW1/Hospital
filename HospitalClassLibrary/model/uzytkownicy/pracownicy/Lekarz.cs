@@ -11,8 +11,8 @@ namespace HospitalClassLibrary.model.uzytkownicy.pracownicy
     public class Lekarz : Pracownik, IPrintable
     {
 
-        SpecjalnoscLekarza specjalnosc;
-        string PWZ;
+        public SpecjalnoscLekarza specjalnosc { get; private set; }
+        public string PWZ { get; private set; }
 
         public Lekarz(string imie, string nazwisko, string pesel, string login, string haslo, string PWZ) : base(imie, nazwisko, pesel, login, haslo)
         {

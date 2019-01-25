@@ -16,6 +16,10 @@ namespace HospitalClassLibrary.model
             
 
         }
+        public Szpital(List<Pracownik> pracownicy)
+        {
+            pracownicySzpitala = pracownicy;
+        }
 
         public void dodajPracownika(Pracownik pracownik)
         {

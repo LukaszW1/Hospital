@@ -55,5 +55,10 @@ namespace Hospital
             StworzUzytkownika stworzUzytkownika = new StworzUzytkownika(szpital);
             stworzUzytkownika.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace Hospital
 {
     public partial class Login : Form
     {
-        Szpital szpital = new Szpital();
+        Szpital szpital;
         List<Pracownik> pracownicySzpitala;
         public Login(Szpital szpital)
         {
@@ -32,17 +32,19 @@ namespace Hospital
         {
             string login = textBox1.Text;
             string haslo = textBox2.Text;
+            bool userFound = false;
             foreach(Pracownik pracownik in pracownicySzpitala)
             {   
-                // TODO fix when no user is found
                 if(pracownik.Login == login)
                 {
+                    userFound = true;
                     if(pracownik.Haslo == haslo)
                     {
+                        this.Hide();
                         MessageBox.Show("Zalogowano pomyslnie");
                         if (pracownik is Administrator)
-                        {
-                            PanelAdmina panelAdmina = new PanelAdmina();
+                        {                            
+                            PanelAdmina panelAdmina = new PanelAdmina(szpital);
                             panelAdmina.Show();
                         }
                         else
@@ -60,7 +62,15 @@ namespace Hospital
                 }
                             
             }
-            MessageBox.Show("Nie znaleziono uzytkownika");
+            if(userFound == false)
+            {
+                MessageBox.Show("Nie znaleziono uzytkownika");
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

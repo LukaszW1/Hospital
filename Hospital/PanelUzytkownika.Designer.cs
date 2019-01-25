@@ -28,13 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(42, 42);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 1;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // PanelUzytkownika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 262);
+            this.Controls.Add(this.monthCalendar1);
             this.Name = "PanelUzytkownika";
             this.Text = "PanelUzytkownika";
             this.ResumeLayout(false);
@@ -42,5 +51,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

@@ -48,6 +48,8 @@ namespace Hospital
 
             binding.DataSource = pracownicySzpitala;
             dataGridView1.DataSource = pracownicySzpitala;
+            //TODO should reload list after adding new user
+            //TODO all data also profession and user type shpuld be visible
         }
 
         private void button2_Click(object sender, EventArgs e)

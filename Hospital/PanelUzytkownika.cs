@@ -28,6 +28,7 @@ namespace Hospital
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //TODO user type should also be visible
             dataGridView1.BeginEdit(true);
         }
 

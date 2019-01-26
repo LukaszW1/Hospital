@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace Hospital
 {
     public partial class PanelAdmina : Form
-    { Szpital szpital;
+    {   Szpital szpital;
         List<Pracownik> pracownicySzpitala;
         public PanelAdmina(Szpital szpital)
         {

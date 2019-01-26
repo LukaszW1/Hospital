@@ -47,8 +47,9 @@ namespace Hospital
 
 
 
-            Administrator admin = new Administrator("jolka", "administratorka", "007", "admin", "admin");
-            szpital.dodajPracownika(admin);
+            Lekarz lekarz = new Lekarz("Adam", "Kowalski", "asfafa", "adam", "adam", "asgag");
+            szpital.dodajPracownika(lekarz);
+
             List<Pracownik> listaPracownikow = szpital.zwrocListePracownikow();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -30,23 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.imieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.peselDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hasloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pielegniarkaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pielegniarkaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lekarzBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pielegniarkaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button3 = new System.Windows.Forms.Button();
+            this.pielegniarkaBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pielegniarkaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pielegniarkaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pielegniarkaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pielegniarkaBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -59,32 +61,12 @@
             this.peselDataGridViewTextBoxColumn,
             this.loginDataGridViewTextBoxColumn,
             this.hasloDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.pielegniarkaBindingSource2;
+            this.dataGridView1.DataSource = this.pielegniarkaBindingSource3;
             this.dataGridView1.Location = new System.Drawing.Point(28, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(514, 361);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(37, 395);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 30);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Wczytaj Pracownikow";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(581, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Dodaj Pracownika";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // imieDataGridViewTextBoxColumn
             // 
@@ -125,6 +107,26 @@
             // 
             this.pielegniarkaBindingSource2.DataSource = typeof(HospitalClassLibrary.model.uzytkownicy.pracownicy.Pielegniarka);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(37, 395);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 30);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Wczytaj Pracownikow";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(581, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Dodaj Pracownika";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // pielegniarkaBindingSource
             // 
             this.pielegniarkaBindingSource.DataSource = typeof(HospitalClassLibrary.model.uzytkownicy.pracownicy.Pielegniarka);
@@ -147,6 +149,10 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // pielegniarkaBindingSource3
+            // 
+            this.pielegniarkaBindingSource3.DataSource = typeof(HospitalClassLibrary.model.uzytkownicy.pracownicy.Pielegniarka);
+            // 
             // PanelAdmina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +169,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pielegniarkaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pielegniarkaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pielegniarkaBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,5 +188,6 @@
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.BindingSource pielegniarkaBindingSource3;
     }
 }

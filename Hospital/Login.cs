@@ -49,7 +49,7 @@ namespace Hospital
                         }
                         else
                         {
-                            PanelUzytkownika panelUzytkownika = new PanelUzytkownika();
+                            PanelUzytkownika panelUzytkownika = new PanelUzytkownika(szpital);
                             panelUzytkownika.Show();
                         }
                         break;
